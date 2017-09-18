@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  div(class="container")
+    div(class="main-content")
+      h1(class="main-head") Find Me Tac #[img(src=('/imgs/taco.png') id="taco" class="taco")] s
+      form(class="search" method="GET" action="/api/find")
+        input(class="address-input" name="address" placeholder="123 Main Street..." type="text")
+        button(class="submit") TACOS!!!
+  script
+    include main.js

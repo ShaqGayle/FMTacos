@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div(class="container results-page")
+    h1(class="results-head") TACO TIME!
+    ul(class="results-list")
+      each result in results
+        li(class="results-item")
+          div(class="business")
+            img(src=result.image_url width="50px" height="50px" class="business-image")
+            div(class="business-content")
+              p(class="business-name") #{result.name}
+              p(class="contact-number") #{result.display_phone}
+              p(class="address") #{result.location.address1} #[br] #{result.location.city} #{result.location.zip_code}
+              a(href=result.url) View on Yelp
