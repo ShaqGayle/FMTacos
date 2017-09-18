@@ -16,8 +16,9 @@ app.get('/', (req,res) => {
   res.render('index');
 });
 
-app.set('port', process.env.port || 3000);
+var port = process.env.port || 3000;
 
-app.listen(app.get('port'), (req,res) => {
+
+app.listen(port, (req,res) => {
   console.log('App started on port 3000');
 });
